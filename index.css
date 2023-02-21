@@ -1,0 +1,233 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body,
+main {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ------------------------------------------------------------------- */
+
+body{
+    background-color: hsl(216, 12%, 8%);
+    color: #fff;
+    font-family: 'Overpass', sans-serif;
+}
+main{
+    position: relative;
+}
+
+.container{
+    width: 414px;
+    height: 414px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    border-radius: 28px;
+    padding: 22px;
+    background: rgb(37,45,55);
+    background: linear-gradient(0deg, rgb(30, 37, 46) 20%, rgb(48, 56, 66) 100%);
+}
+
+.beforRatingCard{
+    display: block;
+}
+
+.afterRatingCard{
+    display: none;
+}
+
+.starIcon{
+    width: fit-content;
+    background-color: hsl(213, 19%, 18%);
+    opacity: 80%;
+    padding: 12px;
+    border-radius: 100px;
+    margin: 22px 0;
+}
+
+.mainContent h2{
+    margin: 12px 0;
+}
+
+.mainContent p{
+    color: hsl(217, 12%, 63%);
+    margin: 12px 0;
+    font-size: 15px;
+}
+
+#ratingBtnSec{
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 0;
+}
+
+
+.ratingBtn{
+    background-color: hsla(210, 19%, 18%, 1);
+    border: none;
+    width: 58px;
+    height: 58px;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+    margin: 8px 0;
+    font-weight: 700;
+} 
+
+.sumbitBtn button{
+    width: 100%;
+    border-radius: 22px;
+    padding: 12px 0;
+    color: #fff;
+    background-color: hsl(25, 97%, 53%);
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 8px;
+    border: none;
+}
+
+.sumbitBtn button:hover{
+    background-color: #fff;
+    color: hsl(25, 97%, 53%);
+    transition: 0.4s;
+}
+
+.ratingBtn:hover{
+    background-color: hsl(25, 97%, 53%);
+    transition: 0.4s;
+}
+
+/***********************************************************/
+
+.responseImg img{
+    margin: 22px auto;
+}
+
+.responseDisplay{
+    margin: 24px 0;
+}
+
+.responseDisplay p{
+    width: fit-content;
+    margin: 0 auto;
+    background-color: hsl(214, 18%, 23%);
+    padding: 8px 22px;
+    border-radius: 25px;
+    color: hsl(25, 84%, 50%);
+    font-weight: 700;
+}
+
+.greetingMessage{
+    text-align: center;
+    margin: 12px 0;
+}
+
+.greetingMessage h2{
+    padding: 10px 0;
+}
+
+.greetingMessage p{
+    font-size: 15px;
+    color: hsl(217, 12%, 63%);
+    padding: 10px 0;
+}
+
+#submiterror{
+  font-size: 12px;
+  margin-left: 20px;
+  margin-top: 4px;
+  color: hsl(25, 84%, 50%);
+}
+
+/**************************************************/
+
+@media only screen and (max-width: 678px) {
+    .container{
+        width: 355px;
+        height: 404px;
+        padding: 12px;
+    }
+    
+    .mainContent h2{
+        padding: 8px 0;
+    }
+    
+    .ratingBtn{
+        width: 46px;
+        height: 46px;
+    }
+
+    #ratingBtnSec{
+        margin: 12px 0;
+    }
+
+    .sumbitBtn button{
+        margin-top: 12px;
+    }
+  }
