@@ -127,17 +127,28 @@ main{
 }
 
 
-.ratingBtn{
-    background-color: hsla(210, 19%, 18%, 1);
-    border: none;
-    width: 58px;
-    height: 58px;
+.rRadio{
+  display: none;
+}
+
+
+.rLabel{
+    background-color: #282626;
+    /* padding: 30px; */
+    width: 54px;
+    height: 54px;
+    /* padding-top: 10px; */
+    line-height: 54px;
+    text-decoration: none;
     border-radius: 100px;
+    text-align: center;
     color: #fff;
     cursor: pointer;
     margin: 8px 0;
     font-weight: 700;
+    caret-color: transparent;
 } 
+
 
 .sumbitBtn button{
     width: 100%;
@@ -158,9 +169,13 @@ main{
     transition: 0.4s;
 }
 
-.ratingBtn:hover{
+.rLabel:hover{
     background-color: hsl(25, 97%, 53%);
     transition: 0.4s;
+}
+
+.rLabel:visited{
+  background-color: hsl(216, 12%, 54%);
 }
 
 /***********************************************************/
@@ -217,10 +232,11 @@ main{
     .mainContent h2{
         padding: 8px 0;
     }
-    
-    .ratingBtn{
-        width: 46px;
-        height: 46px;
+
+    .rLabel{
+      width: 44px;
+      height: 44px;
+      line-height: 44px;
     }
 
     #ratingBtnSec{
